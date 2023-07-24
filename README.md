@@ -99,9 +99,20 @@ Balancer, Using docker and Kubernetes.
     kubectl get all
    ```
     ![Screenshot from 2023-07-24 06-36-27](https://github.com/salmarefaie/DevOps-Task/assets/76884936/ad954a00-cfcd-4fed-8639-810cc69d7641)
+   
     ![Screenshot from 2023-07-24 06-44-21](https://github.com/salmarefaie/DevOps-Task/assets/76884936/fb8c1b35-53f1-42c5-8bdb-5c5c50df1afe)
 
-   
+
+## Domain Name and SSL Certificate
+ - Register a domain name for the web application
+ - From Route53, choose register a domain
+ - Check your domain and complete the requirements
+ - To make ssl certifacate, enter to AWS Certificate Manager
+ - Choose request a certificate, enter your domain and complete the requirements
+ - We will use ssl certificate on classic loadbalncer which made using kubernetes
+ - from loadbalancer, add listner https and add certificate from AWS Certificate Manager
+
+
 ## Output
  - expose application to public internet by load balancer ip
    
