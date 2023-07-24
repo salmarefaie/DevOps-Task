@@ -96,6 +96,14 @@ Balancer, Using docker and Kubernetes.
  
    ```bash
     kubectl apply -f .
+    kubectl get all
    ```
     ![Screenshot from 2023-07-24 06-36-27](https://github.com/salmarefaie/DevOps-Task/assets/76884936/ad954a00-cfcd-4fed-8639-810cc69d7641)
+    ![Screenshot from 2023-07-24 06-44-21](https://github.com/salmarefaie/DevOps-Task/assets/76884936/fb8c1b35-53f1-42c5-8bdb-5c5c50df1afe)
+
+   
+## Output
+ - expose application to public internet by load balancer ip
+   
+![Screenshot from 2023-07-24 06-39-31](https://github.com/salmarefaie/DevOps-Task/assets/76884936/9f280a1a-08dd-4d87-bf51-821878bc67c0)
 
