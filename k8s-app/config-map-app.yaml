@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-map-app
+  namespace: default
+data:
+  REDIS_HOST: "redis-service"
+  REDIS_PORT: "6379"
+  REDIS_DB: "0"
+  SQLSERVER_USER: "sa"
+  SQLSERVER_HOST: "sqlserver_service"
+  MONGODB_USER: "admin"
+  MONGODB_HOST: "mongodb-service"

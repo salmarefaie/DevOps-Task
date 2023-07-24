@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aspnet-app-deployment
+  labels:
+    app: aspnet-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aspnet-app
+  template:
+    metadata:
+      labels:
+        app: aspnet-app
+    spec:
+      containers:
+      - name: aspnet-app-container
+        image: salmarefaie29/aspnet-app:latest
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: config-map-app
+        env:
+        - name: SA_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: secret
+              key: SA_PASSWORD
+        - name: MONGODB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: secret
+              key: MONGODB_PASSWORD

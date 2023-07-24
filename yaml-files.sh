@@ -1,0 +1,10 @@
+scp -i task.pem ../k8s-app/app-deployment.yaml ubuntu@3.80.185.0:/home/ubuntu
+scp -i task.pem ../k8s-app/app-service.yaml ubuntu@3.80.185.0:/home/ubuntu
+scp -i task.pem ../k8s-app/config-map-app.yaml ubuntu@3.80.185.0:/home/ubuntu
+scp -i task.pem ../k8s-app/mongodb-deployment.yaml ubuntu@3.80.185.0:/home/ubuntu
+scp -i task.pem ../k8s-app/mongodb-service.yaml ubuntu@3.80.185.0:/home/ubuntu
+scp -i task.pem ../k8s-app/redis-deployment.yaml ubuntu@3.80.185.0:/home/ubuntu
+scp -i task.pem ../k8s-app/redis-service.yaml ubuntu@3.80.185.0:/home/ubuntu
+scp -i task.pem ../k8s-app/secrets.yaml ubuntu@3.80.185.0:/home/ubuntu
+scp -i task.pem ../k8s-app/sqlserver-deployment.yaml ubuntu@3.80.185.0:/home/ubuntu
+scp -i task.pem ../k8s-app/sqlserver-service.yaml ubuntu@3.80.185.0:/home/ubuntu
