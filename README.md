@@ -52,17 +52,18 @@ Balancer, Using docker and Kubernetes.
 ## Install AWS CLI and kubectl 
 - we need to install aws cli and kubectl on ec2 bastion host to connect with EKS cluster using bastion host machine.
 - we will connect with bastion host machine using ssh and transfare key to bastion host machine to connect with node worker through bastion host.
-
- ```bash      
-    chmod 400 task.pem
-    scp -i task.pem task.pem ubuntu@3.86.85.134:/home/ubuntu
-    ssh -i "task.pem" ubuntu@3.86.85.134
-  ```
   
-- install kubectl and aws cli using scripting
+- from your machine:
+  ```bash      
+    chmod 400 task.pem
+    ssh -i "task.pem" ubuntu@3.80.185.0
+    scp -i task.pem task.pem ubuntu@3.80.185.0:/home/ubuntu
+    scp -i task.pem install-packages.sh ubuntu@3.80.185.0:/home/ubuntu
+   ```
+  
+- install kubectl and aws cli using scripting on bastion host
 
  ```bash      
-    scp -i task.pem install-packages.sh ubuntu@3.86.85.134:/home/ubuntu
     sh install-packages.sh
  ```
  
@@ -70,7 +71,7 @@ Balancer, Using docker and Kubernetes.
  - we can enable docker manually on node worker and we connect to node worker through bastion host.
  
  ```bash      
-    ssh -i "task.pem" ec2-user@10.0.3.18
+    ssh -i "task.pem" ec2-user@10.0.3.222
     sudo systemctl start docker
     sudo systemctl status docker
  ```
