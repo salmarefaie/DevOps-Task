@@ -13,40 +13,42 @@ Balancer, Using docker and Kubernetes.
   - Scripting
 
 ## Run Project 
-1. Clone the project
+- Clone the project
 ```bash  
    git clone https://github.com/salmarefaie/DevOps-Task.git
 ```
 
-2. Run infrastrucrure using terraform
-```bash      
+## Infrastructure
+- Required infrastructure to make EKS Cluster is vpc with 4 subnets; 2 public subnets and 2 private subnets, internet gateway, nat and bastion host in public subnets and worker node in private 
+  subnets. we will connect with EKS cluster using Ec2 bastion host.
+  
+  ![infra-diagram](https://github.com/salmarefaie/DevOps-Task/assets/76884936/a9b934a0-d291-4184-9e33-7bc45c93e91f)
+
+
+- To Run Infrastructure using Terraform
+  ```bash      
    cd Terraform
    terraform init
    terraform plan
    terraform fmt
    terraform apply
-```
-3. Downlooad aspnet application from this repo
+  ```
+## Aspnet App
+- Downlooad aspnet application from this repo
 ```bash  
    https://github.com/docker/awesome-compose/tree/master/aspnet-mssql
 ```
-
-4. Build Docker file for aspnet application to create image then push it to Docker Hup
+- Build Docker file for aspnet application to create image then push it to Docker Hup
 ```bash  
    cd aspnetapp
    docker build -t aspnet-app .
    docker tag aspnet-app salmarefaie29/aspnet-app
    docker push salmarefaie29/aspnet-app:latest
 ```
-![Screenshot from 2023-02-09 23-23-09](https://user-images.githubusercontent.com/76884936/217942752-c3481843-5233-4a5f-9e44-a7430ea900fa.png)
+   ![Docker-image](https://github.com/salmarefaie/DevOps-Task/assets/76884936/014d6cd0-5c59-4d5c-a901-dfad21ffdc47)
+   
+   ![Docker-image2](https://github.com/salmarefaie/DevOps-Task/assets/76884936/e1afb655-47bc-4c2c-a552-179744af2ef7)
 
-6. Pull redis image from docker hub then push it to GCR
-```bash  
-   docker pull redis
-   docker tag redis gcr.io/mineral-order-375711/project-redis
-   docker push gcr.io/mineral-order-375711/project-redis:latest
-```
-![Screenshot from 2023-02-09 23-23-36](https://user-images.githubusercontent.com/76884936/217942382-4fa616f6-f72d-4c96-8a72-e8078bc931d4.png)
 
 7. Connect to vm by ssh
 
