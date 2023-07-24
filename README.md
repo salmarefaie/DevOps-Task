@@ -89,13 +89,13 @@ Balancer, Using docker and Kubernetes.
 ## Deploy app with databases on EKS Cluster
  - transfare yaml files from our machine to bastion host machine.
  
- ```bash
+   ```bash
     sh ../yaml-files.sh 
- ```
+   ```
  - apply yaml files to deploy application.
  
- ```bash
+   ```bash
     kubectl apply -f .
- ```
-  ![Screenshot from 2023-07-24 06-36-27](https://github.com/salmarefaie/DevOps-Task/assets/76884936/ad954a00-cfcd-4fed-8639-810cc69d7641)
+   ```
+    ![Screenshot from 2023-07-24 06-36-27](https://github.com/salmarefaie/DevOps-Task/assets/76884936/ad954a00-cfcd-4fed-8639-810cc69d7641)
 
