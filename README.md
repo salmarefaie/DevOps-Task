@@ -74,6 +74,7 @@ Balancer, Using docker and Kubernetes.
     sudo yum install docker
     sudo systemctl start docker
     sudo systemctl status docker
+    exit
    ```
 
 ## Connect to EKS cluster
